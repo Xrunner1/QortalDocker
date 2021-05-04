@@ -21,7 +21,6 @@ fi
 
 INSTANCE_NAME="qortal_${NET_PORT}"
 EXISTING_RUNNING_CONTAINER_ID=$(docker ps -aqf "name=${INSTANCE_NAME}" --filter status=running)
-echo "EXISTING_RUNNING_CONTAINER_ID: $EXISTING_RUNNING_CONTAINER_ID"
 
 if [ ! -z "${EXISTING_RUNNING_CONTAINER_ID}" ]; then
     echo "Adding minting key ${MINTING_KEY}..."
