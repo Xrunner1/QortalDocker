@@ -24,10 +24,10 @@ EXISTING_RUNNING_CONTAINER_ID=$(docker ps -aqf "name=${INSTANCE_NAME}" --filter 
 
 if [ ! -z "${EXISTING_RUNNING_CONTAINER_ID}" ]; then
     echo "Adding minting key ${MINTING_KEY}..."
-    docker exec -it "${EXISTING_RUNNING_CONTAINER_ID}" curl -X POST "http://localhost:${NET_PORT}/admin/mintingaccounts" -H "accept: text/plain" -H "Content-Type: text/plain" -d "${MINTING_KEY}"
+    docker exec -it "${EXISTING_RUNNING_CONTAINER_ID}" curl -X POST "http://localhost:${API_PORT}/admin/mintingaccounts" -H "accept: text/plain" -H "Content-Type: text/plain" -d "${MINTING_KEY}"
     echo
     echo "Minting accounts:"
-    docker exec -it "${EXISTING_RUNNING_CONTAINER_ID}" curl "http://localhost:${NET_PORT}/admin/mintingaccounts" | jq
+    docker exec -it "${EXISTING_RUNNING_CONTAINER_ID}" curl "http://localhost:${API_PORT}/admin/mintingaccounts" | jq
 else
     echo "Error: could not find a container with name ${INSTANCE_NAME}. Please use ./run.sh first."
 fi
