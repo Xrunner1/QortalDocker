@@ -39,7 +39,7 @@ while [ "${CURRENT_INSTANCE}" -lt "${INSTANCES}" ]; do
         # Container not running - start it
         echo "Starting new container ${INSTANCE_NAME} with API port ${API_PORT} and network port ${NET_PORT}..."
         docker volume create "${INSTANCE_NAME}"
-        docker run -d --name "${INSTANCE_NAME}" --env API_PORT="${API_PORT}" --env NET_PORT="${NET_PORT}" -p 127.0.0.1:${NET_PORT}:${NET_PORT} -v ${INSTANCE_NAME}:/qortal -it qortal
+        docker run -d --name "${INSTANCE_NAME}" --env API_PORT="${API_PORT}" --env NET_PORT="${NET_PORT}" -p ${NET_PORT}:${NET_PORT} -v ${INSTANCE_NAME}:/qortal -it qortal
 
     else
         # Already running
