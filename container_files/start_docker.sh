@@ -13,7 +13,7 @@ echo "{
   \"isTestNet\": true,
   \"bitcoinNet\": \"TEST3\",
   \"litecoinNet\": \"TEST3\",
-  \"repositoryPath\": \"db-testnet\",
+  \"repositoryPath\": \"db\",
   \"blockchainConfig\": \"testchain.json\",
   \"minBlockchainPeers\": 1,
   \"apiDocumentationEnabled\": true,
