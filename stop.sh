@@ -26,6 +26,6 @@ if [ -z "${CONTAINER_IDS}" ]; then
     exit
 fi
 
-docker exec -it $(docker ps -a -q --filter name="${NAME_FILTER}") ./stop.sh -t
+docker exec -it $(docker ps -a -q --filter name="${NAME_FILTER}") ./stop_docker.sh
 docker stop $(docker ps -a -q --filter name="${NAME_FILTER}")
 docker rm $(docker ps -a -q --filter name="${NAME_FILTER}")
