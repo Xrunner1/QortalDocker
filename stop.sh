@@ -5,12 +5,12 @@
 # or use "all" to stop all Qortal containers
 #
 # e.g:
-# ./stop.sh 62392
+# ./stop.sh 62402
 # ./stop.sh all
 #
 
 NET_PORT=$1
-NET_PORT=${NET_PORT:=62392}
+NET_PORT=${NET_PORT:=62402}
 
 if [[ "${NET_PORT}" == "all" ]]; then
 echo "Stopping all Qortal instances..."

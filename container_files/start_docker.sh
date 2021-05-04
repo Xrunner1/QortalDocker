@@ -1,10 +1,10 @@
 #!/bin/bash
 
 if [ -z ${NET_PORT} ]; then
-    NET_PORT=62392
+    NET_PORT=62402
 fi
 if [ -z ${API_PORT} ]; then
-    API_PORT=62391
+    API_PORT=62401
 fi
 
 echo

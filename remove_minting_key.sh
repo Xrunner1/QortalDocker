@@ -4,7 +4,7 @@
 # Usage: pass the network port of the required container as the first argument
 #
 # e.g:
-# ./remove_minting_key.sh 62392
+# ./remove_minting_key.sh 62402
 #
 
 NET_PORT=$1

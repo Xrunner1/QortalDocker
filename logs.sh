@@ -4,11 +4,11 @@
 # Usage: pass the network port of the required container as the first argument
 #
 # e.g:
-# ./logs.sh 62392
+# ./logs.sh 62402
 #
 
 NET_PORT=$1
-NET_PORT=${NET_PORT:=62392}
+NET_PORT=${NET_PORT:=62402}
 INSTANCE_NAME="qortal_${NET_PORT}"
 CONTAINER_ID=$(docker ps -aqf "name=${INSTANCE_NAME}")
 
