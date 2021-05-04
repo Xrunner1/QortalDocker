@@ -19,6 +19,7 @@ if [ -z $MINTING_KEY ]; then
     exit
 fi
 
+API_PORT=$((NET_PORT-1))
 INSTANCE_NAME="qortal_${NET_PORT}"
 EXISTING_RUNNING_CONTAINER_ID=$(docker ps -aqf "name=${INSTANCE_NAME}" --filter status=running)
 
