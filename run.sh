@@ -31,6 +31,7 @@ while [ "${CURRENT_INSTANCE}" -lt "${INSTANCES}" ]; do
 
         if [ ! -z "${EXISTING_CONTAINER_ID}" ]; then
             echo "Stopping container ${INSTANCE_NAME} with ID ${EXISTING_CONTAINER_ID}..."
+            docker exec -it "${EXISTING_CONTAINER_ID}" ./stop.sh -t
             docker container stop "${EXISTING_CONTAINER_ID}"
             docker rm "${EXISTING_CONTAINER_ID}"
         fi
